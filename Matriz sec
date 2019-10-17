@@ -1,0 +1,42 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+#include<locale.h>
+#include<ctype.h>
+
+// Faça um programa que preencha uma matriz inteira de ordem 10 e mostre somente os valores inseridos dentro da sua diagonal principal.
+
+#define lin 5
+#define col 5
+main()
+{
+
+  setlocale(LC_ALL,"Portuguese");
+	int mat[lin][col], l, c;
+	int  i;
+
+	printf(" MATRIZ  \n");
+	for(l=0; l<lin; l++)
+		{
+		 printf("\n");
+			for(c=0; c<col; c++)
+			{
+			mat[l][c] = rand() % 4 ;
+			printf(" [%d] ",mat[l][c]); 
+		    }
+		}
+	printf("\n\n");
+	printf(" MATRIZ DIAGONAL PRINCIPAL \n");
+	for(l=0; l<lin; l++)
+		{
+		 printf("\n");
+			for(c=0; c<col; c++)
+			{
+			
+			if(l + 1 == 5 - (c + 1) + 1)
+			printf(" [%d] ",mat[l][c]);
+			printf("\  ");
+		    }
+		}
+		
+}

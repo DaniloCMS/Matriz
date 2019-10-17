@@ -26,17 +26,19 @@ main()
 		    }
 		}
 	printf("\n\n");
-	printf(" MATRIZ DIAGONAL PRINCIPAL \n");
+	printf(" MATRIZ DIAGONAL SECUNDÁRIA \n");
 	for(l=0; l<lin; l++)
 		{
 		 printf("\n");
 			for(c=0; c<col; c++)
 			{
 			
-			if(l + 1 == 5 - (c + 1) + 1)
+			if(l == 5 - 1 - c)
 			printf(" [%d] ",mat[l][c]);
 			printf("\  ");
 		    }
 		}
+
+
 		
 }
